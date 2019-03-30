@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/showAvilable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Visibility"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="-312dp"
+        android:onClick="exeButtonToSearchAvailableDevices"
+        android:text="Bonded Devices" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="354dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="154dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <ImageView
+        android:id="@+id/Visibility"
+        android:layout_width="61dp"
+        android:layout_height="55dp"
+        android:layout_alignEnd="@+id/msgScreen"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="-6dp"
+        android:layout_marginEnd="237dp"
+        android:background="@drawable/invisible"
+        android:onClick="discoverable" />
+
+    <ImageView
+        android:id="@+id/send"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/send" />
+
+    <TextView
+        android:id="@+id/msg_Box"
+        android:layout_width="180dp"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-74dp"
+        android:layout_marginBottom="75dp" />
+
+    <Switch
+        android:id="@+id/onOff"
+        android:layout_width="87dp"
+        android:layout_height="44dp"
+        android:layout_alignTop="@+id/showAvilable"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="156dp"
+        android:gravity="center|fill"
+        android:text="On"
+        android:textColorLink="@android:color/background_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/msgScreen"
+        android:layout_width="266dp"
+        android:layout_height="321dp"
+        android:layout_alignTop="@+id/onOff"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="155dp"
+        android:fontFamily="sans-serif"
+        android:gravity="bottom|left"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/language"
+        android:layout_width="83dp"
+        android:layout_height="72dp"
+        android:layout_alignTop="@+id/onOff"
+        android:layout_alignEnd="@+id/showAvilable"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="140dp"
+        app:srcCompat="@drawable/language" />
+
+    <ImageView
+        android:id="@+id/say"
+        android:layout_width="59dp"
+        android:layout_height="73dp"
+        android:layout_alignTop="@+id/msg_Box"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="-74dp"
+        android:layout_toStartOf="@+id/language"
+        app:srcCompat="@drawable/say" />
+
+</RelativeLayout>
